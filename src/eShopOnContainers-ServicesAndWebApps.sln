@@ -140,6 +140,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Locations.FunctionalTests",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Marketing.FunctionalTests", "Services\Marketing\Marketing.FunctionalTests\Marketing.FunctionalTests.csproj", "{E8FB4822-3A99-4917-860E-412FCD93882F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "readme", "readme", "{DF60870E-043D-4D3D-9691-6F9A86D9D95A}"
+	ProjectSection(SolutionItems) = preProject
+		..\README-3.1.1.md = ..\README-3.1.1.md
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
