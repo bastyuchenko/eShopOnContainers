@@ -63,9 +63,8 @@ namespace Microsoft.eShopOnContainers.Services.Locations.API
                     var logger = sp.GetRequiredService<ILogger<DefaultServiceBusPersisterConnection>>();
 
                     var serviceBusConnectionString = Configuration["EventBusConnection"];
-                    var serviceBusConnection = new ServiceBusConnectionStringBuilder(serviceBusConnectionString);
 
-                    return new DefaultServiceBusPersisterConnection(serviceBusConnection, logger);
+                    return new DefaultServiceBusPersisterConnection(serviceBusConnectionString);
                 });
             }
             else
@@ -248,7 +247,7 @@ namespace Microsoft.eShopOnContainers.Services.Locations.API
                     var eventBusSubcriptionsManager = sp.GetRequiredService<IEventBusSubscriptionsManager>();
 
                     return new EventBusServiceBus(serviceBusPersisterConnection, logger,
-                        eventBusSubcriptionsManager, subscriptionClientName, iLifetimeScope);
+                        eventBusSubcriptionsManager, iLifetimeScope, subscriptionClientName);
                 });
             }
             else

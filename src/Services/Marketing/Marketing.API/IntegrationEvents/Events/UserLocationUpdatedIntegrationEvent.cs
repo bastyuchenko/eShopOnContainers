@@ -4,7 +4,7 @@
     using Microsoft.eShopOnContainers.BuildingBlocks.EventBus.Events;
     using System.Collections.Generic;
 
-    public class UserLocationUpdatedIntegrationEvent : IntegrationEvent
+    public record UserLocationUpdatedIntegrationEvent : IntegrationEvent
     {
         public string UserId { get; set; }
 
